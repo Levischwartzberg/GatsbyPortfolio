@@ -6,14 +6,14 @@ function Contact(props) {
     return (
         <div id="contact">
             <h2 id="contact-head"> Contact Me</h2>
-            <section class="contact" id="contactme"> 
-                <div class="info">
+            <section className="contact" id="contactme"> 
+                <div className="info">
                     <ul>
                         <li>
                             <a href="mailto:levischwartzberg@gmail.com"> Email: Levischwartzberg@gmail.com </a>
                         </li>
                         <li>
-                            <text> Phone Number: 612-963-0400 </text>
+                            <p> Phone Number: 612-963-0400 </p>
                         </li>
                         <li>
                             <a className="instagram" rel="noopener" href="https://instagram.com/levischwartzberg">
