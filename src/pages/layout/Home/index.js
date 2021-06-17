@@ -20,10 +20,14 @@ function Home() {
     };
 
     React.useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
+        if (isBrowser) {
+            window.addEventListener('scroll', handleScroll, { passive: true });
+        }
 
         return () => {
-        window.removeEventListener('scroll', handleScroll);
+            if (isBrowser) {
+                window.removeEventListener('scroll', handleScroll);
+            }
         };
     }, []);
 
