@@ -7,13 +7,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 function Home() {
+    const isBrowser = typeof window !== "undefined";
     const bioRef = React.useRef();
     const [navOpacity, setNavOpacity] = React.useState(0);
 
     const [scrollPosition, setScrollPosition] = React.useState(0);
     const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
+        if (isBrowser) {
+            const position = window.pageYOffset;
+            setScrollPosition(position);
+        }
     };
 
     React.useEffect(() => {
